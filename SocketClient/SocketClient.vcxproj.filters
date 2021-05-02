@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="noxyfilter">
+      <UniqueIdentifier>{9fc36bbe-52ba-4108-ab92-526cf1b5cc89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="noxyfilter\GameEngine_Headers">
+      <UniqueIdentifier>{547df85c-acb1-4ed7-be20-9132616d8b01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ClientHeaders">
+      <UniqueIdentifier>{6e3bf083-4c84-4d80-9d6d-45210d6154a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClientSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\GameEngine\Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Animhandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Asprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\BlockySprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\BoxCollider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Castle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\CollisionHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\CollisionListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\ConfigFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Debugdisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\ErrorReport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Fysik.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\ImageProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Imageutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\InputEventListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\InputHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Movement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\MyRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\ParserV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Spelclocka.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Spelmotor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\SpriteConstraint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\TimerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\Tower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GameEngine\VDEBUG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Animation.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Asprite.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Audio.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\BlockySprite.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\BoxCollider.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Castle.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\CollisionHandler.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\CollisionListener.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ConfigFile.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Debugdisplay.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ErrorReport.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Fysik.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ImageProcessor.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Imageutils.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\InputEventListener.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\InputHandler.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Loader.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Movement.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\MyRenderer.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ParserV.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Spelclocka.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Spelmotor.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Sprite.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\SpriteConstraint.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\TimerListener.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Tower.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\VDEBUG.h">
+      <Filter>noxyfilter\GameEngine_Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketException.h">
+      <Filter>ClientHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSocket.h">
+      <Filter>ClientHeaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,15 @@
+%(AdditionalIncludeDirectories);
+
+
+$(VC_IncludePath);$(WindowsSDK_IncludePath);
+
+;./includeGE/;../includeGE/;../../includeGE/;../../../includeGE/;
+
+;./includeGE/;../includeGE/;../../includeGE/;../../../includeGE/;
+
+
+
+
+
+
+

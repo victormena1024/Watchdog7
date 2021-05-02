@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A0B3AB8D-932F-4236-B702-D1F60B7172E3}</ProjectGuid>
+    <RootNamespace>SocketServerRewritten</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\tmpSERVER\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);.\SDL2\include;..\SDL2\include;..\..\SDL2\include;..\..\..\SDL2\include;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);..\Lib;..\..\Lib;</LibraryPath>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>tmp1\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\..\include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);watchdog\Lib;..watchdog\Lib;..\..\watchdog\Lib;.\watchdog\lib;..\..\..\Lib;\cpp\lib\;</LibraryPath>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\SDL2\include;..\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies);SDL2.lib;SDL2main.lib;SDL_Net_Debug.lib;Ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>./includeGE/;../includeGE/;../includeSDL/;../include/;./include/GameEngine/;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <OmitFramePointers>true</OmitFramePointers>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAsManaged>false</CompileAsManaged>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <ErrorReporting>None</ErrorReporting>
+      <AdditionalOptions>/EHsc %(AdditionalOptions)</AdditionalOptions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies);SDL2.lib;SDL2main.lib;SDL2_Net.lib;Ws2_32.lib;Gameengine1.lib;SDL_draw_static.lib;SDL2_image.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+      <Version>
+      </Version>
+      <LinkErrorReporting>NoErrorReport</LinkErrorReporting>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\SpelmotorV12\common_src\Imageutils.cpp" />
+    <ClCompile Include="Commands.cpp" />
+    <ClCompile Include="MainServer.cpp" />
+    <ClCompile Include="LowLevel.cpp" />
+    <ClCompile Include="ServerSocket.cpp" />
+    <ClCompile Include="temp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\SpelmotorV12\common_include\Imageutils.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\common_include\SDL_draw.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\common_include\SDL_image.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\common_include\SDL_mixer.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Animation.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Audio.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\BlockySprite.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Castle.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\CollisionHandler.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\CollisionListener.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Constraint.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Debugdisplay.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\DerivedInputEventListener.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Everything.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Fysik.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Globals.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\ImageProcessor.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\InputEventListener.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\InputHandler.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Loader.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\MyRenderer.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Spelclocka.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Sprite.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\TimerListener.h" />
+    <ClInclude Include="..\..\..\SpelmotorV12\SpelmotorV12\include\GameEngine\Tower.h" />
+    <ClInclude Include="..\include\SDLnetsys.h" />
+    <ClInclude Include="..\include\SDL_net.h" />
+    <ClInclude Include="..\include\zconf.h" />
+    <ClInclude Include="..\include\zlib.h" />
+    <ClInclude Include="..\include_SDL\begin_code.h" />
+    <ClInclude Include="..\include_SDL\close_code.h" />
+    <ClInclude Include="..\include_SDL\SDL.h" />
+    <ClInclude Include="..\include_SDL\SDL_assert.h" />
+    <ClInclude Include="..\include_SDL\SDL_atomic.h" />
+    <ClInclude Include="..\include_SDL\SDL_audio.h" />
+    <ClInclude Include="..\include_SDL\SDL_bits.h" />
+    <ClInclude Include="..\include_SDL\SDL_blendmode.h" />
+    <ClInclude Include="..\include_SDL\SDL_clipboard.h" />
+    <ClInclude Include="..\include_SDL\SDL_config.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_android.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_iphoneos.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_macosx.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_minimal.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_pandora.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_psp.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_windows.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_winrt.h" />
+    <ClInclude Include="..\include_SDL\SDL_config_wiz.h" />
+    <ClInclude Include="..\include_SDL\SDL_copying.h" />
+    <ClInclude Include="..\include_SDL\SDL_cpuinfo.h" />
+    <ClInclude Include="..\include_SDL\SDL_egl.h" />
+    <ClInclude Include="..\include_SDL\SDL_endian.h" />
+    <ClInclude Include="..\include_SDL\SDL_error.h" />
+    <ClInclude Include="..\include_SDL\SDL_events.h" />
+    <ClInclude Include="..\include_SDL\SDL_filesystem.h" />
+    <ClInclude Include="..\include_SDL\SDL_gamecontroller.h" />
+    <ClInclude Include="..\include_SDL\SDL_gesture.h" />
+    <ClInclude Include="..\include_SDL\SDL_haptic.h" />
+    <ClInclude Include="..\include_SDL\SDL_hints.h" />
+    <ClInclude Include="..\include_SDL\SDL_joystick.h" />
+    <ClInclude Include="..\include_SDL\SDL_keyboard.h" />
+    <ClInclude Include="..\include_SDL\SDL_keycode.h" />
+    <ClInclude Include="..\include_SDL\SDL_loadso.h" />
+    <ClInclude Include="..\include_SDL\SDL_log.h" />
+    <ClInclude Include="..\include_SDL\SDL_main.h" />
+    <ClInclude Include="..\include_SDL\SDL_messagebox.h" />
+    <ClInclude Include="..\include_SDL\SDL_mouse.h" />
+    <ClInclude Include="..\include_SDL\SDL_mutex.h" />
+    <ClInclude Include="..\include_SDL\SDL_name.h" />
+    <ClInclude Include="..\include_SDL\SDL_net.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengl.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengles.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengles2.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengles2_gl2.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="..\include_SDL\SDL_opengl_glext.h" />
+    <ClInclude Include="..\include_SDL\SDL_pixels.h" />
+    <ClInclude Include="..\include_SDL\SDL_platform.h" />
+    <ClInclude Include="..\include_SDL\SDL_power.h" />
+    <ClInclude Include="..\include_SDL\SDL_quit.h" />
+    <ClInclude Include="..\include_SDL\SDL_rect.h" />
+    <ClInclude Include="..\include_SDL\SDL_render.h" />
+    <ClInclude Include="..\include_SDL\SDL_revision.h" />
+    <ClInclude Include="..\include_SDL\SDL_rwops.h" />
+    <ClInclude Include="..\include_SDL\SDL_scancode.h" />
+    <ClInclude Include="..\include_SDL\SDL_shape.h" />
+    <ClInclude Include="..\include_SDL\SDL_stdinc.h" />
+    <ClInclude Include="..\include_SDL\SDL_surface.h" />
+    <ClInclude Include="..\include_SDL\SDL_system.h" />
+    <ClInclude Include="..\include_SDL\SDL_syswm.h" />
+    <ClInclude Include="..\include_SDL\SDL_test.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_assert.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_common.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_compare.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_crc32.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_font.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_fuzzer.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_harness.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_images.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_log.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_md5.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_memory.h" />
+    <ClInclude Include="..\include_SDL\SDL_test_random.h" />
+    <ClInclude Include="..\include_SDL\SDL_thread.h" />
+    <ClInclude Include="..\include_SDL\SDL_timer.h" />
+    <ClInclude Include="..\include_SDL\SDL_touch.h" />
+    <ClInclude Include="..\include_SDL\SDL_types.h" />
+    <ClInclude Include="..\include_SDL\SDL_version.h" />
+    <ClInclude Include="..\include_SDL\SDL_video.h" />
+    <ClInclude Include="..\include_SDL\SDL_vulkan.h" />
+    <ClInclude Include="Commands.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="LowLevel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SocketServer.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

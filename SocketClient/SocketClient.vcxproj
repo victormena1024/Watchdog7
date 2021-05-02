@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6E5701F8-4FE8-4B08-B92E-8CD36BF3211F}</ProjectGuid>
+    <RootNamespace>SocketClientRewritten</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);./SDL_Net/include;../SDL_Net/include/;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);..\Lib\;..\..\lib\;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>..\tmp1\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\SDL_include\;..\..\include\;..\include\;..\SDL_include\GameEngine\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);./Lib;./../Lib;</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\SDL2\include;..\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib;%(AdditionalDependencies);Ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\SDL2\lib;.\SDL2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\SDL2\include\;..\SDL2\include\;..\..\SDL2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies);SDL2_Net.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\SDL2\lib;..\SDL2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkErrorReporting>NoErrorReport</LinkErrorReporting>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ClientSocket.cpp" />
+    <ClCompile Include="MainClient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Animation.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Asprite.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Audio.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\BlockySprite.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\BoxCollider.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Castle.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\CollisionHandler.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\CollisionListener.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ConfigFile.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Debugdisplay.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ErrorReport.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Fysik.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ImageProcessor.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Imageutils.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\InputEventListener.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\InputHandler.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Loader.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Movement.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\MyRenderer.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\ParserV.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Spelclocka.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Spelmotor.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Sprite.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\SpriteConstraint.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\TimerListener.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\Tower.h" />
+    <ClInclude Include="..\..\Watchdog.2017.11.01.(20.51)\include\GameEngine\VDEBUG.h" />
+    <ClInclude Include="..\include\GameEngine\Animation.h" />
+    <ClInclude Include="..\include\GameEngine\Animhandler.h" />
+    <ClInclude Include="..\include\GameEngine\Asprite.h" />
+    <ClInclude Include="..\include\GameEngine\Audio.h" />
+    <ClInclude Include="..\include\GameEngine\BlockySprite.h" />
+    <ClInclude Include="..\include\GameEngine\BoxCollider.h" />
+    <ClInclude Include="..\include\GameEngine\Castle.h" />
+    <ClInclude Include="..\include\GameEngine\CollisionHandler.h" />
+    <ClInclude Include="..\include\GameEngine\CollisionListener.h" />
+    <ClInclude Include="..\include\GameEngine\ConfigFile.h" />
+    <ClInclude Include="..\include\GameEngine\Debugdisplay.h" />
+    <ClInclude Include="..\include\GameEngine\ErrorReport.h" />
+    <ClInclude Include="..\include\GameEngine\Fysik.h" />
+    <ClInclude Include="..\include\GameEngine\ImageProcessor.h" />
+    <ClInclude Include="..\include\GameEngine\Imageutils.h" />
+    <ClInclude Include="..\include\GameEngine\InputEventListener.h" />
+    <ClInclude Include="..\include\GameEngine\InputHandler.h" />
+    <ClInclude Include="..\include\GameEngine\Loader.h" />
+    <ClInclude Include="..\include\GameEngine\Movement.h" />
+    <ClInclude Include="..\include\GameEngine\MyRenderer.h" />
+    <ClInclude Include="..\include\GameEngine\ParserV.h" />
+    <ClInclude Include="..\include\GameEngine\Spelclocka.h" />
+    <ClInclude Include="..\include\GameEngine\Spelmotor.h" />
+    <ClInclude Include="..\include\GameEngine\Sprite.h" />
+    <ClInclude Include="..\include\GameEngine\SpriteConstraint.h" />
+    <ClInclude Include="..\include\GameEngine\TimerListener.h" />
+    <ClInclude Include="..\include\GameEngine\Tower.h" />
+    <ClInclude Include="..\include\GameEngine\VDEBUG.h" />
+    <ClInclude Include="ClientSocket.h" />
+    <ClInclude Include="SocketException.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
